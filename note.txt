@@ -1,0 +1,10 @@
+know the logical name of ethernet device:
+networksetup -listallhardwareports
+
+to get Mac adress of ethernet :
+networksetup -getinfo ethernet | awk '/Adress/{print $3}'
+
+ou : networksetup -getmacaddress Ethernet ...
+
+autre pour adress Mac de la carte Wi-Fi:
+networksetup -getinfo Wi-Fi | awk '/Wifi ID/{print $3}'
