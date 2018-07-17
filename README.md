@@ -6,9 +6,9 @@ Utilisation des gestionnaires de package [MacPorts ou Brew sur MacOs]
 
 Prérequis :
 Outils Système :
-df : connaître le'espace disaue disponible
+df : connaître l'espace disque disponible
 top : Affichage des processus en exécution
-ps : dire les processus aui tournent
+ps : dire les processus qui tournent
 kill : terminer un processus
 
 Outils Réseau :
@@ -22,4 +22,4 @@ hosts : défini une IP et un nom manuellement
 networks : donne un nom logique à un réseau
 host.conf : dit qui résolve quoi. permettre de savoir si c'est un fichier de config qui réseau les noms de domaine ou si c'est le service bind à travers les servers DNS.
 resolve.conf : défini les DNS, 
-interface : intefaces permet de configurer l'ensemble des interfaces système concernant le réseau
+interface : interfaces permet de configurer l'ensemble des interfaces système concernant le réseau
