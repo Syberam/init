@@ -8,3 +8,10 @@ ou : networksetup -getmacaddress Ethernet ...
 
 autre pour adress Mac de la carte Wi-Fi:
 networksetup -getinfo Wi-Fi | awk '/Wifi ID/{print $3}'
+
+
+
+
+check systemctl instead of init.d ??!!
+
+
