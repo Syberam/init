@@ -1,0 +1,24 @@
+#to kill THE last process in background:
+sudo kill $!
+# or :
+#
+# sudo kill -9 $!
+#
+# or :
+#
+# sudo kill [process PID]
+##to check the processes in background:
+## `jobs`
+## or to know pid
+## `ps -afu`
+## or
+## fg for the last process
+#
+# or in present case :
+#sudo pkill tail
+#
+#or
+#sudo pkill -P [current process PID:parent of the process we want to kill]
+#
+#
+#or fg and ctrl+C
