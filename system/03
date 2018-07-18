@@ -1,0 +1,3 @@
+/etc/hostname
+
+# to be sure to not have errors with sudo command check the file /etc/hosts and verify if local domain name correspond to the new system name

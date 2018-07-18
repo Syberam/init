@@ -1,0 +1,4 @@
+cat /var/run/sshd.pid
+
+# or
+# sudo /usr/sbin/service sshd status | awk '/Main PID/{print $3}'

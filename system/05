@@ -1,0 +1,5 @@
+sudo /usr/sbin/service ssh status
+
+# Or :
+# sudo etc/init.d/ssh status
+# more informations with "sudo" but not necessary
