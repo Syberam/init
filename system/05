@@ -1,5 +1,10 @@
-sudo /usr/sbin/service ssh status
+#the command to use to know the state of SSH service is :
+sudo systemctl status ssh.service
+
+# you will have more informations with "sudo" but not necessary
+#
+#the next commands work but are depreciated
+#[sudo] /usr/sbin/service ssh status
 
 # Or :
-# sudo etc/init.d/ssh status
-# more informations with "sudo" but not necessary
+#[sudo] /etc/init.d/ssh status

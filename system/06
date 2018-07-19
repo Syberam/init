@@ -1,7 +1,8 @@
+# to reboot SSH service, better to use:
+sudo systemctl restart ssh.service
+#
+#
 #depreciated : sudo /etc/init.d/ssh restart
-
+#
 # or
 # sudo /usr/sbin/service ssh restart
-#
-# better to use:
-sudo systemctl start ssh.service

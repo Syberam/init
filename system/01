@@ -1,1 +1,2 @@
+#file where find the debian version
 /etc/debian_version

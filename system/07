@@ -1,4 +1,6 @@
 cat /var/run/sshd.pid
-
-# or
-# sudo /usr/sbin/service sshd status | awk '/Main PID/{print $3}'
+# or:
+# systemctl status sshd.service | awk '/Main PID/{print $3}'
+#
+# or (depreciate):
+# /usr/sbin/service sshd status | awk '/Main PID/{print $3}'
