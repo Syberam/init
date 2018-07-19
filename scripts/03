@@ -1,0 +1,1 @@
+ls -lapS $1 | grep ^- | awk '/ /{print $9}'
