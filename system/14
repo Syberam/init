@@ -1,1 +1,2 @@
+#Put a '&' at the end of a command to execute it in background
 sudo tail -f /var/log/syslog &

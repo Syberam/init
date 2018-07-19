@@ -1,1 +1,2 @@
-sudo du -sh /var/*
+#Command to know the exact (b option for octets) weight of each directories in /var folder
+sudo du -shb /var/*
