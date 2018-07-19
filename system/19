@@ -1,1 +1,2 @@
+#to block entrance of every IPs
 sudo iptables -A INPUT -j REJECT
