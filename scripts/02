@@ -1,1 +1,6 @@
-echo -e `crontab -l`'\n'"0 4 */7 * * echo _________\`date\`_________ >> ~/var/log/update_script.log && sudo apt-get update >> ~/var/log/update_script.log && sudo apt-get upgrade >> ~/var/log/update_script.log && echo _________________________________________ >> ~/var/log/update_script.log"'\n' | crontab
+#
+echo "0 4 */7 * * root echo _________\`date\`_________ >> ~/var/log/update_script.log && sudo apt-get update >> ~/var/log/update_script.log && sudo apt-get upgrade >> ~/var/log/update_script.log && echo _________________________________________ >> ~/var/log/update_script.log" >> /etc/crontab
+systemctl restart cron
+#
+#old:
+#echo -e `crontab -l`'\n'"0 4 */7 * * echo _________\`date\`_________ >> ~/var/log/update_script.log && sudo apt-get update >> ~/var/log/update_script.log && sudo apt-get upgrade >> ~/var/log/update_script.log && echo _________________________________________ >> ~/var/log/update_script.log"'\n' | crontab
