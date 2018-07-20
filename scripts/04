@@ -1,6 +1,6 @@
 #check if script exist in crontab
 this_Script_Name=$(readlink -f `basename "$0"`)
-crontab_Task=`echo "* * * * * sh "`$this_Script_Name``
+crontab_Task=`echo "0 0 * * * sh "`$this_Script_Name``
 
 cron_State=`crontab -l`
 is_scheduled=`echo "$cron_State" | grep -q "$crontab_Task"; echo $?`
@@ -17,6 +17,8 @@ if [ "$last_Crontab_MD5" != "$current_Crontab_MD5" ] ; then
 	echo "#/!\ File modified : "`date '+%F'`" :" >> $this_Script_Name
 	echo '#'"$current_Crontab_MD5" >> $this_Script_Name
 	#inform admin by mail
+	echo "/etc/crontab has been modified today" | mail -s "/etc/crontab modif" root
+	
 fi
 
 #Original File Md5 :
