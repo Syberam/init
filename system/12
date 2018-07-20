@@ -1,2 +1,6 @@
 #Command to know the exact (b option for octets) weight of each directories in /var folder
-sudo du -shb /var/*
+sudo du -h -d 1 /var
+#or not goo ??
+#sudo du -shb /var/*
+#or
+#sudo du -hb -d 1 /var
