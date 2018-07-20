@@ -1,0 +1,23 @@
+#check if script exist in crontab
+this_Script_Name=$(readlink -f `basename "$0"`)
+crontab_Task=`echo "* * * * * sh "`$this_Script_Name``
+
+cron_State=`crontab -l`
+is_scheduled=`echo "$cron_State" | grep -q "$crontab_Task"; echo $?`
+
+#if the script is not programmed in crontab, add the task
+if [ "$is_scheduled" -eq "1" ] ; then
+	echo "`crontab -l`"'\n'"$crontab_Task"'\n' | crontab
+fi
+
+#then execute the verif of /etc/crontab
+last_Crontab_MD5=`tail "$this_Script_Name" -n 1 | tr -d '#'`
+current_Crontab_MD5=`md5sum /etc/crontab | awk '/ /{print $1}'`
+if [ "$last_Crontab_MD5" != "$current_Crontab_MD5" ] ; then
+	echo "#/!\ File modified : "`date '+%F'`" :" >> $this_Script_Name
+	echo '#'"$current_Crontab_MD5" >> $this_Script_Name
+	#inform admin by mail
+fi
+
+#Original File Md5 :
+#8f111d100ea459f68d333d63a8ef2205
