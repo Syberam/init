@@ -1,1 +1,2 @@
 netstat -r | awk '/default/{print $2}' | head -n 1
+#route -n get default | awk '/gateway/{print $2}'
