@@ -1,2 +1,5 @@
 #to block entrance of every IPs
-sudo iptables -A INPUT -j REJECT
+sudo iptables -P INPUT DROP
+#is better than
+#sudo iptables -A INPUT -j REJECT
+#because this will sent a response to the incomming IP
