@@ -1,2 +1,2 @@
 #the command to authorised 10.0.0.0/8 ip is :
-sudo iptables -A INPUT -s 10.0.0.0/8 ACCEPT
+sudo iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
