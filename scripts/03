@@ -1,1 +1,3 @@
-ls -lapS $1 | grep ^- | awk '/ /{print $9}'
+sudo find $1 -type f -printf "%f\t%b\n" | sort -n +1
+#if only first level of directory files
+#ls -lapS $1 | grep ^- | awk '/ /{print $9}'

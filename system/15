@@ -1,5 +1,10 @@
 #to kill THE last process in background:
-sudo kill $!
+sudo kill %
+#
+#% pour la getion des taches sur bash
+#
+#other solution
+##sudo kill $!
 # or :
 #
 # sudo kill -9 $!
